@@ -379,10 +379,13 @@
           a.target = '_blank';
           a.rel = 'noopener';
         } else {
-          // Sem número configurado: leva ao formulário de contato
-          a.href = SA.root + 'pages/contato.html#formulario';
-          a.removeAttribute('target');
+          // Sem número configurado em js/config.js: abre o WhatsApp só com a mensagem
+          var msg = a.getAttribute('data-whatsapp-msg') || SITE.whatsappMensagem || '';
+          a.href = 'https://wa.me/?text=' + encodeURIComponent(msg);
+          a.target = '_blank';
+          a.rel = 'noopener';
           a.setAttribute('data-whatsapp-pending', '');
+          if (!SA._waWarned) { SA._waWarned = true; console.warn('S & A: configure o número do WhatsApp em js/config.js'); }
         }
       });
 

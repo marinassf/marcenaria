@@ -505,6 +505,22 @@ a:hover .roll > span, button:hover .roll > span, .roll:hover > span { transform:
 .media { position: relative; overflow: hidden; background: var(--media-bg); }
 .media img { width: 100%; height: 100%; object-fit: cover; }
 
+/* Seção "Somos a S&A" (home) */
+.studio {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: clamp(2.5rem, 1.5rem + 3vw, 5rem);
+  align-items: start;
+}
+.studio__lead { grid-column: 1 / span 8; color: var(--fg); }
+.studio__text { grid-column: 9 / -1; align-self: end; }
+.studio__img figcaption { padding-top: .8rem; }
+.studio__img--a { grid-column: 1 / span 8; }
+.studio__img--a .media { aspect-ratio: 3 / 2; }
+.studio__img--b { grid-column: 9 / -1; margin-top: clamp(4rem, 2rem + 10vw, 14rem); }
+.studio__img--b .media { aspect-ratio: 4 / 5; }
+
 /* ==========================================================================
    14. MOSAICO DE DETALHES
    ========================================================================== */
@@ -650,27 +666,29 @@ a:hover .roll > span, button:hover .roll > span, .roll:hover > span { transform:
 }
 .footer__base a:hover { color: var(--fg); }
 
-/* Marcas com que trabalhamos */
-.brand-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gutter); }
-.brand-card {
-  display: flex; flex-direction: column;
-  min-height: clamp(26rem, 18rem + 16vw, 38rem);
-  padding: clamp(1.5rem, 1rem + 1.5vw, 2.75rem);
-  background: var(--pill-bg);
+/* Marcas com que trabalhamos — mesma linguagem tipográfica do hero */
+.brand-lines { display: grid; }
+.brand-line {
+  display: grid;
+  gap: clamp(.75rem, .5rem + .8vw, 1.25rem);
+  padding-block: clamp(2rem, 1rem + 3vw, 4rem);
+  border-top: 1px solid var(--line);
 }
-.brand-card:nth-child(even) { margin-top: clamp(2rem, 1rem + 4vw, 6rem); }
-[data-theme="sand"] .brand-card { background: var(--c-linho); }
-[data-theme="sand"] .brand-card:nth-child(even) { background: var(--c-ebano); color: var(--c-linho); --fg-muted: rgba(243,236,225,.6); --line: rgba(243,236,225,.16); --pill-bg: rgba(243,236,225,.1); }
-.brand-card__top { display: flex; justify-content: space-between; gap: 1rem; }
-.brand-card__name {
-  margin-top: clamp(2.5rem, 1.5rem + 4vw, 6rem);
-  font-family: var(--font-display); font-weight: 400;
-  font-size: clamp(3rem, 1rem + 5.6vw, 7.5rem);
-  line-height: .9; letter-spacing: -.04em;
+.brand-line:last-child { border-bottom: 1px solid var(--line); }
+.brand-line__meta { display: flex; gap: .3rem; }
+.brand-line__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3.5rem, .5rem + 13vw, 15rem);
+  line-height: .8;
+  letter-spacing: -.045em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
-.brand-card__list { margin-top: auto; padding-top: 2.5rem; display: grid; gap: .9rem; }
-.brand-card__list ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gutter); border-top: 1px solid var(--line); }
-.brand-card__list li { font-family: var(--font-display); font-size: var(--fs-md); line-height: 1.25; padding: .6rem 0; border-bottom: 1px solid var(--line); }
+.brand-line__patterns { list-style: none; margin: 0; padding: 0; max-width: 46rem; }
+.brand-line__patterns .pill { font-size: var(--fs-sm); padding: .4rem .7rem .38rem; color: var(--fg); }
+.brand-line:nth-child(even) { justify-items: end; text-align: right; }
+.brand-line:nth-child(even) .brand-line__patterns { justify-content: flex-end; }
 
 /* ==========================================================================
    19. PÁGINAS INTERNAS
@@ -908,6 +926,10 @@ a:hover .roll > span, button:hover .roll > span, .roll:hover > span { transform:
 
 
   .project-body__lead, .project-body__text { grid-column: 1 / -1; }
+  .studio__lead { grid-column: 1 / -1; }
+  .studio__text { grid-column: 1 / span 9; }
+  .studio__img--a { grid-column: 1 / span 8; }
+  .studio__img--b { grid-column: 9 / -1; margin-top: 30%; }
   .project-body__text { margin-top: 2rem; }
 
   .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -940,9 +962,11 @@ a:hover .roll > span, button:hover .roll > span, .roll:hover > span { transform:
   .card__media { aspect-ratio: 4 / 5; }
 
   .pcards { grid-template-columns: 1fr; }
-  .brand-cards { grid-template-columns: 1fr; }
-  .brand-card:nth-child(even) { margin-top: 0; }
-  .brand-card { min-height: 22rem; }
+  .studio__text { grid-column: 1 / -1; }
+  .studio__img--a { grid-column: 1 / -1; }
+  .studio__img--b { grid-column: 4 / -1; margin-top: 0; }
+  .brand-line__name { font-size: clamp(2.6rem, 15vw, 5rem); white-space: normal; }
+  .brand-line__patterns .pill { font-size: var(--fs-xs); }
   .pcard:nth-child(n) { margin-top: 0; min-height: 22rem; }
 
 

@@ -16,18 +16,15 @@ sa-moveis/
 │   ├── projetos.html          Catálogo com filtros
 │   ├── projeto.html           Página individual (projeto.html?p=slug)
 │   ├── sobre.html
-│   ├── materiais.html
-│   └── contato.html           Orçamento e contato
 ├── css/
 │   ├── fonts.css              Carregamento das fontes (@font-face)
 │   └── style.css              Estilos, organizados por seções numeradas
 ├── js/
 │   ├── config.js              ★ WhatsApp, Instagram, e-mail, formulário
 │   ├── projects.js            ★ Projetos e categorias
-│   ├── materials.js           ★ Marcas de MDF e padrões de exemplo
+│   ├── materials.js           Marcas de MDF (seção desativada)
 │   ├── script.js              Núcleo: header, menu, animações, contatos
-│   ├── render.js              Catálogo, página de projeto, materiais, lightbox
-│   └── form.js                Validação e envio do formulário
+│   └── render.js              Catálogo, página de projeto, lightbox
 ├── assets/
 │   ├── logos/                 Logo vetorizada (escura e clara) + paleta
 │   ├── fonts/                 Noka (inserir) + fontes secundárias
@@ -120,26 +117,17 @@ endereco: '',  mapaUrl: '',  horario: '',
 ```
 
 - Campos vazios ficam **ocultos** no site (nada é inventado).
-- Enquanto o `whatsapp` estiver vazio, os botões de WhatsApp levam ao formulário de contato.
+- Enquanto o `whatsapp` estiver vazio, os botões abrem o WhatsApp sem destinatário (só com a mensagem). Preencha o número antes de publicar.
 - Em cada página de projeto, o botão de WhatsApp já abre com uma mensagem citando o projeto.
 
 ---
 
-## 5. Formulário de orçamento
+## 5. Orçamento pelo WhatsApp
 
-O formulário valida os campos, aceita até 5 imagens de referência e está pronto para um serviço de envio.
-
-1. Crie um formulário gratuito em um destes serviços: **Formspree** (formspree.io), Getform, Basin ou FormSubmit.
-   Ative o recebimento de **arquivos anexos** se quiser receber as imagens (no Formspree, recurso dos planos pagos).
-2. Copie o endereço do formulário (ex.: `https://formspree.io/f/abcdwxyz`).
-3. Em `js/config.js`: `formEndpoint: 'https://formspree.io/f/abcdwxyz'`.
-
-**Sem endpoint configurado**, o site **não simula o envio**: mostra "O envio pelo site ainda não está ativo"
-e oferece WhatsApp/e-mail com os dados já preenchidos (quando esses contatos estiverem configurados).
-
-Campos enviados: `nome`, `telefone`, `email`, `ambiente`, `descricao`, `dimensoes`, `referencia`, `consentimento`, `anexos[]`.
-
----
+Não há mais página de contato nem formulário: todos os botões de orçamento
+(header, hero, páginas de projeto e rodapé) abrem uma conversa no WhatsApp.
+Preencha o número em `js/config.js` → `whatsapp: '5565999998888'`.
+Nas páginas de projeto, a mensagem já cita o projeto que a pessoa estava vendo.
 
 ## 6. Projetos
 
@@ -182,23 +170,10 @@ e a navegação "anterior / próximo" segue essa mesma ordem.
 
 ---
 
-## 7. Marcas com que trabalhamos (página Marcas / materiais.html)
+## 7. Marcas (desativado por enquanto)
 
-Arquivo: **`js/materials.js`**. A seção Materiais da home e a página de Materiais mostram
-apenas as marcas de MDF com que a S & A trabalha e alguns padrões de exemplo de cada uma.
-
-```js
-window.MARCAS_MDF = [
-  { nome: 'Guararapes', descricao: 'Painéis de MDF',
-    padroes: ['Carvalho Natural', 'Ipê', 'Imbuia', 'Alecrim', 'Tijolo', 'Fulgê'] },
-  { nome: 'Duratex', descricao: 'Painéis de MDF',
-    padroes: ['Carvalho Hanover', 'Carvalho Berlim', 'Carvalho Avelã', 'Rovere Marsala', 'Pau Ferro Natural', 'Branco Diamante'] }
-];
-```
-
-- Para outra marca, copie um bloco `{ ... }` e edite nome e padrões.
-- Os padrões atuais vieram dos catálogos dos fabricantes: confira se continuam em linha
-  e troque pelos que a S & A mais utiliza.
+A seção e a página de marcas de MDF foram retiradas do site. Os dados continuam em
+`js/materials.js` (Guararapes e Duratex, com padrões de exemplo) para reativar depois.
 
 ## 7.1 Vídeo do hero
 
@@ -267,5 +242,3 @@ Vale também criar/atualizar o **Perfil da Empresa no Google** (Google Maps) com
 - **Segurança:** sem dependências externas de JavaScript; conteúdo dinâmico escapado; campo *honeypot*
   anti-spam no formulário; cabeçalhos de segurança em `.htaccess` / `_headers`.
 - **Compatibilidade:** navegadores modernos (Chrome, Safari, Edge, Firefox — versões atuais).
-# marcenaria
-# marcenaria

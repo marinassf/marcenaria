@@ -52,8 +52,8 @@
       <img class="brand__dark" src="assets/logos/logo-sa-horizontal.svg" alt="" width="117" height="46" aria-hidden="true">
     </a>
     <div class="header-right">
-      <nav class="nav" aria-label="Navegação principal"><ul class="nav__list"><li><a class="nav__link" href="pages/projetos.html"><span class="roll"><span data-text="Projetos">Projetos</span></span></a></li><li><a class="nav__link" href="pages/sobre.html"><span class="roll"><span data-text="Sobre">Sobre</span></span></a></li><li><a class="nav__link" href="pages/materiais.html"><span class="roll"><span data-text="Marcas">Marcas</span></span></a></li><li><a class="nav__link" href="pages/contato.html"><span class="roll"><span data-text="Contato">Contato</span></span></a></li></ul></nav>
-      <a class="btn header-cta" href="pages/contato.html#formulario">Orçamento <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5l7-7M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+      <nav class="nav" aria-label="Navegação principal"><ul class="nav__list"><li><a class="nav__link" href="pages/projetos.html"><span class="roll"><span data-text="Projetos">Projetos</span></span></a></li><li><a class="nav__link" href="pages/sobre.html"><span class="roll"><span data-text="Sobre">Sobre</span></span></a></li></ul></nav>
+      <a class="btn header-cta" href="#" data-whatsapp>Orçamento no WhatsApp <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5l7-7M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
         <span data-menu-label>Menu</span><span class="menu-toggle__bars" aria-hidden="true"></span>
       </button>
@@ -62,10 +62,9 @@
 </header>
 
 <div class="mobile-menu" id="mobile-menu" inert>
-  <nav aria-label="Menu"><ul class="mobile-menu__list"><li><a href="index.html" aria-current="page">Início<span class="pill pill--num">1</span></a></li><li><a href="pages/projetos.html">Projetos<span class="pill pill--num">2</span></a></li><li><a href="pages/sobre.html">Sobre<span class="pill pill--num">3</span></a></li><li><a href="pages/materiais.html">Marcas<span class="pill pill--num">4</span></a></li><li><a href="pages/contato.html">Contato<span class="pill pill--num">5</span></a></li></ul></nav>
+  <nav aria-label="Menu"><ul class="mobile-menu__list"><li><a href="index.html" aria-current="page">Início<span class="pill pill--num">1</span></a></li><li><a href="pages/projetos.html">Projetos<span class="pill pill--num">2</span></a></li><li><a href="pages/sobre.html">Sobre<span class="pill pill--num">3</span></a></li></ul></nav>
   <div class="mobile-menu__foot">
-    <a class="btn" href="pages/contato.html#formulario">Solicitar orçamento <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5l7-7M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
-    <a href="pages/contato.html" data-whatsapp>WhatsApp</a>
+    <a class="btn" href="#" data-whatsapp>Orçamento no WhatsApp <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5l7-7M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
     <a href="#" data-site="instagram" data-site-block="instagram">Instagram</a>
   </div>
 </div>
@@ -91,7 +90,7 @@
         <p class="hero__word hero__word--top" aria-hidden="true">Móveis</p>
         <div class="hero__intro">
           <p>Espaços pensados.<br>Detalhes que permanecem.</p>
-          <a class="btn" href="pages/contato.html#formulario">Solicitar orçamento <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5l7-7M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+          <a class="btn" href="#" data-whatsapp>Orçamento no WhatsApp <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5l7-7M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
         </div>
       </div>
       <p class="hero__word hero__word--bottom" aria-hidden="true">Planejados</p>
@@ -136,18 +135,26 @@
 
   <!-- ESTÚDIO -->
   <section class="section" data-theme="dark" aria-labelledby="studio-title" style="padding-top:0">
-    <div class="container intro">
-      <h2 class="intro__title t-3xl" id="studio-title" data-reveal="up">Somos a S &amp; A</h2>
-      <div class="intro__text">
-        <p class="t-lg" data-reveal="up">Uma marcenaria de Tangará da Serra dedicada ao desenvolvimento e à execução de móveis planejados, da conversa inicial ao último ajuste.</p>
-        <div class="prose" data-reveal="up" style="--d:100ms">
-          <p>Cada projeto começa pelo modo como o espaço é vivido. Planejamento, escolha de materiais e precisão de execução trabalham juntos para que o móvel pertença à arquitetura, e não apenas ocupe um lugar nela.</p>
-        </div>
-        <a class="btn" href="pages/sobre.html" data-reveal="up" style="--d:160ms">Conheça a S &amp; A <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5l7-7M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+    <div class="container">
+      <div class="section-top">
+        <h2 class="t-2xl" id="studio-title" data-reveal="up">Somos a S&amp;A</h2>
+        <div class="section-top__aside" data-reveal="up">
+         
       </div>
-      <div class="intro__media">
-        <div class="media" data-reveal="media" data-provisorio="imagem"><img src="https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=1600&amp;h=2000" srcset="https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=480&amp;h=600 480w, https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=800&amp;h=1000 800w, https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=1200&amp;h=1500 1200w, https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=1600&amp;h=2000 1600w, https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=2200&amp;h=2750 2200w, https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=2800&amp;h=3500 2800w" sizes="(max-width: 960px) 90vw, 50vw" alt="Oficina de marcenaria com bancadas, ferramentas e luz natural" loading="lazy" decoding="async"></div>
+    </div>
+    <div class="container studio">
+      <p class="studio__lead t-xl" data-reveal="up">Uma marcenaria de Tangará da Serra dedicada ao desenvolvimento e à execução de móveis planejados, da conversa inicial ao último ajuste.</p>
+      <div class="studio__text prose" data-reveal="up" style="--d:120ms">
+        <p>Cada projeto começa pelo modo como o espaço é vivido. Planejamento, escolha de materiais e precisão de execução trabalham juntos para que o móvel pertença à arquitetura, e não apenas ocupe um lugar nela.</p>
       </div>
+      <figure class="studio__img studio__img--a">
+        <div class="media" data-reveal="media" data-provisorio="imagem"><img src="https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=1600&amp;h=1067" srcset="https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=480&amp;h=320 480w, https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=800&amp;h=533 800w, https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=1200&amp;h=800 1200w, https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=1600&amp;h=1067 1600w, https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=2200&amp;h=1467 2200w, https://images.unsplash.com/photo-1597960194599-22929afc25b1?auto=format&amp;fit=crop&amp;q=78&amp;w=2800&amp;h=1867 2800w" sizes="(max-width: 640px) 100vw, 60vw" alt="Oficina de marcenaria com bancadas, ferramentas e luz natural" loading="lazy" decoding="async"></div>
+        <figcaption class="pills"><span class="pill">Oficina</span></figcaption>
+      </figure>
+      <figure class="studio__img studio__img--b">
+        <div class="media" data-reveal="media" data-provisorio="imagem"><img src="https://images.unsplash.com/photo-1679797850019-3d0d8659a695?auto=format&amp;fit=crop&amp;q=78&amp;w=1600&amp;h=2000" srcset="https://images.unsplash.com/photo-1679797850019-3d0d8659a695?auto=format&amp;fit=crop&amp;q=78&amp;w=480&amp;h=600 480w, https://images.unsplash.com/photo-1679797850019-3d0d8659a695?auto=format&amp;fit=crop&amp;q=78&amp;w=800&amp;h=1000 800w, https://images.unsplash.com/photo-1679797850019-3d0d8659a695?auto=format&amp;fit=crop&amp;q=78&amp;w=1200&amp;h=1500 1200w, https://images.unsplash.com/photo-1679797850019-3d0d8659a695?auto=format&amp;fit=crop&amp;q=78&amp;w=1600&amp;h=2000 1600w, https://images.unsplash.com/photo-1679797850019-3d0d8659a695?auto=format&amp;fit=crop&amp;q=78&amp;w=2200&amp;h=2750 2200w, https://images.unsplash.com/photo-1679797850019-3d0d8659a695?auto=format&amp;fit=crop&amp;q=78&amp;w=2800&amp;h=3500 2800w" sizes="(max-width: 640px) 70vw, 30vw" alt="Marceneiro ajustando uma peça de madeira na bancada" loading="lazy" decoding="async"></div>
+        <figcaption class="pills"><span class="pill">Execução</span></figcaption>
+      </figure>
     </div>
   </section>
 
@@ -163,19 +170,6 @@
       <h2 class="mosaic__title t-2xl" id="details-title">Detalhes que permanecem.</h2>
     </div>
   </section>
-  <!-- MATERIAIS -->
-  <section class="section" data-theme="sand" aria-labelledby="materials-title">
-    <div class="container">
-      <div class="section-top">
-        <h2 class="t-2xl" id="materials-title" data-reveal="up">Marcas com que trabalhamos</h2>
-        <div class="section-top__aside" data-reveal="up">
-          <p class="t-muted">Painéis de MDF de fabricantes reconhecidos, com padrões para cada estilo de ambiente.</p>
-        </div>
-      </div>
-      <div class="brand-cards" data-mdf-brands></div>
-    </div>
-  </section>
-
 </main>
 
 <footer class="site-footer" data-theme="dark" aria-labelledby="footer-title">
@@ -185,20 +179,19 @@
     <div class="footer__row">
       <p class="prose" data-reveal="up" style="--d:100ms">Conte o que você imagina. Medidas aproximadas, fotos do ambiente ou referências: a conversa começa por aí.</p>
       <div class="footer__actions" data-reveal="up" style="--d:180ms">
-        <a class="btn btn--lg" href="pages/contato.html#formulario">Solicitar orçamento <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5l7-7M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
-        <a class="btn btn--lg btn--ghost" href="pages/contato.html" data-whatsapp>Conversar no WhatsApp <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5l7-7M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        <a class="btn btn--lg" href="#" data-whatsapp>Conversar no WhatsApp <svg class="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 9.5l7-7M3.5 2.5h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
       </div>
     </div>
     </div>
     <div class="footer__cols">
       <div class="footer__col">
         <span class="eyebrow">Menu</span>
-        <ul class="footer__links" role="list"><li><a href="index.html"><span class="roll"><span data-text="Início">Início</span></span></a></li><li><a href="pages/projetos.html"><span class="roll"><span data-text="Projetos">Projetos</span></span></a></li><li><a href="pages/sobre.html"><span class="roll"><span data-text="Sobre">Sobre</span></span></a></li><li><a href="pages/materiais.html"><span class="roll"><span data-text="Marcas">Marcas</span></span></a></li><li><a href="pages/contato.html"><span class="roll"><span data-text="Contato">Contato</span></span></a></li></ul>
+        <ul class="footer__links" role="list"><li><a href="index.html"><span class="roll"><span data-text="Início">Início</span></span></a></li><li><a href="pages/projetos.html"><span class="roll"><span data-text="Projetos">Projetos</span></span></a></li><li><a href="pages/sobre.html"><span class="roll"><span data-text="Sobre">Sobre</span></span></a></li></ul>
       </div>
       <div class="footer__col">
         <span class="eyebrow">Contato</span>
         <ul class="footer__links" role="list">
-          <li><a href="pages/contato.html" data-whatsapp><span class="roll"><span data-text="WhatsApp">WhatsApp</span></span></a></li>
+          <li><a href="#" data-whatsapp><span class="roll"><span data-text="WhatsApp">WhatsApp</span></span></a></li>
           <li data-site-block="instagram"><a href="#" data-site="instagram">Instagram</a></li>
           <li data-site-block="email"><a href="#" data-site="email">E-mail</a></li>
           <li data-site-block="telefoneExibicao"><a href="#" data-site="telefoneExibicao"></a></li>
@@ -224,7 +217,6 @@
 
 <script src="js/script.js" defer></script>
 <script src="js/projects.js" defer></script>
-<script src="js/materials.js" defer></script>
 <script src="js/render.js" defer></script>
 </body>
 </html>

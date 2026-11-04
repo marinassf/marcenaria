@@ -63,16 +63,15 @@
   function brandsHTML() {
     return (window.MARCAS_MDF || []).map(function (m, i) {
       return '' +
-        '<article class="brand-card" data-reveal="up" style="--d:' + (i * 120) + 'ms">' +
-          '<div class="brand-card__top">' +
+        '<article class="brand-line">' +
+          '<div class="brand-line__meta" data-reveal="up">' +
             '<span class="pill pill--num">' + U.pad(i + 1) + '</span>' +
             (m.descricao ? '<span class="pill">' + esc(m.descricao) + '</span>' : '') +
           '</div>' +
-          '<h3 class="brand-card__name">' + esc(m.nome) + '</h3>' +
-          '<div class="brand-card__list">' +
-            '<span class="eyebrow">Alguns padrões</span>' +
-            '<ul role="list">' + (m.padroes || []).map(function (pd) { return '<li>' + esc(pd) + '</li>'; }).join('') + '</ul>' +
-          '</div>' +
+          '<h3 class="brand-line__name" data-reveal="up">' + esc(m.nome) + '</h3>' +
+          '<ul class="brand-line__patterns pills" role="list" aria-label="Alguns padrões ' + esc(m.nome) + '" data-reveal="up" style="--d:120ms">' +
+            (m.padroes || []).map(function (pd) { return '<li class="pill">' + esc(pd) + '</li>'; }).join('') +
+          '</ul>' +
         '</article>';
     }).join('');
   }
@@ -240,8 +239,7 @@
             '<div class="spec-card"><span class="eyebrow">Detalhes</span>' + spec(p.detalhes) + '</div>' +
           '</div>' +
           '<div class="project-actions">' +
-            '<a class="btn btn--lg" href="contato.html?ambiente=' + esc(p.categoria) + '&amp;projeto=' + esc(p.slug) + '#formulario">Solicitar orçamento ' + U.arrow + '</a>' +
-            '<a class="btn btn--lg btn--ghost" data-whatsapp data-whatsapp-msg="' + esc('Olá! Vi o projeto "' + p.titulo + '" no site da S & A e gostaria de conversar sobre algo parecido.') + '" href="contato.html#formulario">WhatsApp ' + U.arrow + '</a>' +
+            '<a class="btn btn--lg" href="#" data-whatsapp data-whatsapp-msg="' + esc('Olá! Vi o projeto "' + p.titulo + '" no site da S & A e gostaria de um orçamento para algo parecido.') + '">Pedir orçamento no WhatsApp ' + U.arrow + '</a>' +
           '</div>' +
           '<nav class="pager" aria-label="Outros projetos" style="margin-top:clamp(4rem,2rem + 5vw,8rem)">' +
             '<a href="' + esc(projectUrl(prev)) + '" rel="prev"><span class="eyebrow">← Anterior</span><span class="pager__title">' + esc(prev.titulo) + '</span></a>' +
@@ -289,7 +287,7 @@
   SA.materials = (function () {
     var rootEl = doc.getElementById('materials-root');
     if (!rootEl) return;
-    rootEl.innerHTML = '<div class="brand-cards">' + brandsHTML() + '</div>';
+    rootEl.innerHTML = '<div class="brand-lines">' + brandsHTML() + '</div>';
     finish(rootEl);
   })();
 
