@@ -268,3 +268,4 @@ Vale também criar/atualizar o **Perfil da Empresa no Google** (Google Maps) com
   anti-spam no formulário; cabeçalhos de segurança em `.htaccess` / `_headers`.
 - **Compatibilidade:** navegadores modernos (Chrome, Safari, Edge, Firefox — versões atuais).
 # marcenaria
+# marcenaria
