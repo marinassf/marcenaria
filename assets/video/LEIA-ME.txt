@@ -1,0 +1,13 @@
+VÍDEO DO HERO (abertura da página inicial)
+
+Salve aqui o vídeo próprio com o nome:  hero.mp4
+Ele passa a ter prioridade automaticamente sobre o vídeo provisório.
+
+Recomendações:
+- 8 a 15 segundos, sem som (o vídeo toca sem áudio), em loop
+- Formato MP4 (H.264), 1920 × 1080 px, até ~6 MB
+- Movimento lento de câmera mostrando a marcenaria (cozinha, detalhes, luz natural)
+- Ferramenta gratuita para comprimir: https://handbrake.fr (predefinição "Web")
+
+Vídeo provisório atual: Mixkit #43033 (licença Mixkit, uso gratuito),
+carregado direto de assets.mixkit.co. Substitua antes de publicar.

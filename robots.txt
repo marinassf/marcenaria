@@ -1,0 +1,7 @@
+# S & A Móveis Planejados
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# Substitua o domínio abaixo pelo endereço final do site
+Sitemap: https://www.seudominio.com.br/sitemap.xml

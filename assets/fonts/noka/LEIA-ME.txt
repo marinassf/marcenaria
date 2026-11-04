@@ -1,0 +1,17 @@
+Coloque aqui os arquivos da fonte Noka (Blackletra), com estes nomes:
+
+  Noka-Light.woff2
+  Noka-Regular.woff2
+  Noka-Medium.woff2
+  Noka-SemiBold.woff2  (opcional)
+
+Se você tiver os arquivos em .otf ou .ttf, converta para .woff2
+(ex.: https://cloudconvert.com/otf-to-woff2) ou ajuste a extensão
+em css/fonts.css.
+
+A Noka é uma fonte comercial (Fontspring / Adobe Fonts). Verifique se a
+licença cobre uso em website (web license). Se usar Adobe Fonts, veja a
+opção "Adobe Fonts" no README.md.
+
+Enquanto os arquivos não forem adicionados, o site usa a fonte
+provisória Urbanist apenas como reserva.
